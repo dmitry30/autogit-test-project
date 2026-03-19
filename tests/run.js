@@ -23,6 +23,15 @@ assert(calc.add(-1, 1) === 0, 'add(-1, 1) === 0');
 assert(calc.subtract(10, 4) === 6, 'subtract(10, 4) === 6');
 assert(calc.multiply(6, 7) === 42, 'multiply(6, 7) === 42');
 assert(calc.multiply(0, 100) === 0, 'multiply(0, 100) === 0');
+assert(calc.divide(10, 2) === 5, 'divide(10, 2) === 5');
+assert(calc.divide(0, 5) === 0, 'divide(0, 5) === 0');
+
+try {
+  calc.divide(1, 0);
+  assert(false, 'divide(1, 0) should throw Division by zero');
+} catch (e) {
+  assert(e.message === 'Division by zero', 'divide(1, 0) throws Division by zero');
+}
 
 // --- TaskManager tests ---
 console.log('\nTaskManager:');
