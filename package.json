@@ -1,0 +1,10 @@
+{
+  "name": "autogit-test-project",
+  "version": "1.0.0",
+  "description": "Test project for AUTOGIT system",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node tests/run.js"
+  }
+}
