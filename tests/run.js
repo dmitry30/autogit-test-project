@@ -33,6 +33,32 @@ try {
   assert(e.message === 'Division by zero', 'divide(1, 0) throws Division by zero');
 }
 
+// --- Calculator power/sqrt/modulo tests ---
+console.log('\nCalculator power/sqrt/modulo:');
+
+assert(calc.power(2, 3) === 8, 'power(2, 3) === 8');
+assert(calc.power(5, 0) === 1, 'power(5, 0) === 1');
+
+assert(calc.sqrt(9) === 3, 'sqrt(9) === 3');
+assert(calc.sqrt(0) === 0, 'sqrt(0) === 0');
+
+try {
+  calc.sqrt(-1);
+  assert(false, 'sqrt(-1) should throw');
+} catch (e) {
+  assert(e.message === 'Cannot take sqrt of negative number', 'sqrt(-1) throws Cannot take sqrt of negative number');
+}
+
+assert(calc.modulo(10, 3) === 1, 'modulo(10, 3) === 1');
+assert(calc.modulo(10, 2) === 0, 'modulo(10, 2) === 0');
+
+try {
+  calc.modulo(5, 0);
+  assert(false, 'modulo(5, 0) should throw Division by zero');
+} catch (e) {
+  assert(e.message === 'Division by zero', 'modulo(5, 0) throws Division by zero');
+}
+
 // --- TaskManager tests ---
 console.log('\nTaskManager:');
 
